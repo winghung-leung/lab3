@@ -63,13 +63,10 @@ public class MainActivity extends AppCompatActivity
     }
 
     public void sumNum(View v){
-
-        System.out.println("goes here");
-        EditText et1 = (EditText)findViewById(R.id.et1);
-        EditText et2 = (EditText)findViewById(R.id.et2);
         TextView tv = (TextView)findViewById(R.id.textView);
+        System.out.println("goes here");
 
-        sum = Integer.parseInt(et1.getText().toString()) + Integer.parseInt(et2.getText().toString());
+        sum = getSum();
 
         tv.setText(""+sum);
     }
@@ -79,7 +76,7 @@ public class MainActivity extends AppCompatActivity
         EditText et2 = (EditText)findViewById(R.id.et2);
         TextView tv = (TextView)findViewById(R.id.textView);
 
-        sum = Integer.parseInt(et1.getText().toString()) + Integer.parseInt(et2.getText().toString());
+        sum = Integer.parseInt(et1.getText().toString()) - Integer.parseInt(et2.getText().toString());
         return sum;
     }
 }

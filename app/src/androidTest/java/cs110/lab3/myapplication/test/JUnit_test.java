@@ -28,13 +28,13 @@ public class JUnit_test extends ActivityInstrumentationTestCase2<MainActivity>
         my.runOnUiThread(new Runnable() {
             @Override
             public void run() {
-                et1.setText("2");
-                et2.setText("3");
+                et1.setText("3");
+                et2.setText("2");
 
             }
         });
 
-        assertEquals(5, my.getSum());
+        assertEquals(1, my.getSum());
 
     }
 
