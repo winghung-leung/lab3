@@ -32,24 +32,8 @@ public class MainActivity extends AppCompatActivity
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
-        });*/
-
-        Button btn = (Button) findViewById(R.id.button);
-
-        btn.setOnClickListener(new View.OnClickListener()
-        {
-            @Override
-            public void onClick(View v)
-            {
-                EditText et1 = (EditText)findViewById(R.id.et1);
-                EditText et2 = (EditText)findViewById(R.id.et2);
-                TextView tv = (TextView)findViewById(R.id.textView);
-
-                int sum = Integer.parseInt(et1.getText().toString()) + Integer.parseInt(et2.getText().toString());
-
-                tv.setText("" + sum);
-            }
         });
+        */
     }
 
     @Override
