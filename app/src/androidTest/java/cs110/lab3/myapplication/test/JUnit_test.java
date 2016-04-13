@@ -21,10 +21,18 @@ public class JUnit_test extends ActivityInstrumentationTestCase2<MainActivity>
     public void test_first(){
 
         my = getActivity();
-        EditText et1 = (EditText)my.findViewById(R.id.et1);
-        EditText et2 = (EditText)my.findViewById(R.id.et2);
+        final EditText et1 = (EditText)my.findViewById(R.id.et1);
+        final EditText et2 = (EditText)my.findViewById(R.id.et2);
         TextView tv = (TextView)my.findViewById(R.id.textView);
 
+        my.runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                et1.setText("2");
+                et2.setText("3");
+
+            }
+        });
 
 
         int sum = Integer.parseInt(et1.getText().toString()) + Integer.parseInt(et2.getText().toString());
