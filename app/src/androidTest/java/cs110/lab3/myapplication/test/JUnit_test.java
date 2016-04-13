@@ -34,10 +34,7 @@ public class JUnit_test extends ActivityInstrumentationTestCase2<MainActivity>
             }
         });
 
-
-        int sum = Integer.parseInt(et1.getText().toString()) + Integer.parseInt(et2.getText().toString());
-
-        assertEquals(5, sum);
+        assertEquals(5, my.getSum());
 
     }
 

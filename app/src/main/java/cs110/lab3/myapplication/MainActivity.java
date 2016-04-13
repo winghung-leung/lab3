@@ -14,6 +14,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity
 {
+    int sum;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -68,8 +69,17 @@ public class MainActivity extends AppCompatActivity
         EditText et2 = (EditText)findViewById(R.id.et2);
         TextView tv = (TextView)findViewById(R.id.textView);
 
-        int sum = Integer.parseInt(et1.getText().toString()) + Integer.parseInt(et2.getText().toString());
+        sum = Integer.parseInt(et1.getText().toString()) + Integer.parseInt(et2.getText().toString());
 
         tv.setText(""+sum);
+    }
+
+    public int getSum(){
+        EditText et1 = (EditText)findViewById(R.id.et1);
+        EditText et2 = (EditText)findViewById(R.id.et2);
+        TextView tv = (TextView)findViewById(R.id.textView);
+
+        sum = Integer.parseInt(et1.getText().toString()) + Integer.parseInt(et2.getText().toString());
+        return sum;
     }
 }
